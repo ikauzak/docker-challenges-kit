@@ -1,9 +1,9 @@
 # Objetivos
----
+
 Vamos iniciar com algo simples. :tada:
 
 # Atividades
----
+
 ## Crie sua primeira imagem Docker
 
 Crie uma nova imagem `Docker` seguindo os seguintes requisitos:
