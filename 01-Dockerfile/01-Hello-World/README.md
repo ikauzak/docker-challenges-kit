@@ -1,10 +1,10 @@
-# Objetivos
+## Objetivos
 
 Vamos iniciar com algo simples. :tada:
 
-# Atividades
+## Atividades
 
-## Crie sua primeira imagem Docker
+### Crie sua primeira imagem Docker
 
 Crie uma nova imagem `Docker` seguindo os seguintes requisitos:
 1. O nome da imagem deverá ser `helloworld`
