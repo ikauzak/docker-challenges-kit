@@ -14,7 +14,7 @@ const fullImageName = image + ":" + tag
 
 // Função para validar se a imagem existe dentro do host
 func TestIfImageExists(t *testing.T) {
-	output := docker.DoesImageExist(t, fullImageName, logger.TestingT)
+	output := docker.DoesImageExist(t, fullImageName, logger.Discard)
 	assert.True(t, output)
 }
 
