@@ -35,7 +35,17 @@ func TestRegistryIsUpAndRunning(t *testing.T) {
 
 // Teste para validar envio de imagens ao registry local
 func TestPushToLocalRegistry(t *testing.T) {
-	imageToPush := pullImage("busybox:1.35.0")
+	testImage := "busybox:1.35.0"
+	image, err := pullImage(testImage)
+	if err != nil {
+		panic(err)
+	}
+
+	defer image.Close()
+	io.Copy(os.Stdout, image)
+
+	imageToPush := tagImage(testImage)
+
 	docker.Push(t, logger.Discard, imageToPush)
 	t.Logf("Enviado imagem %s de teste com sucesso!", imageToPush)
 
@@ -44,32 +54,43 @@ func TestPushToLocalRegistry(t *testing.T) {
 	t.Logf("Removido imagem %s localmente com sucesso!", imageToPush)
 }
 
-func pullImage(testImage string) string {
+// Teste para validar pull das imagens helloworld
+func TestPullFromRegistry(t *testing.T) {
+	tags := []string{"v1", "v2"}
+
+	for _, tag := range tags {
+		image, err := pullImage("localhost:5000/helloworld:" + tag)
+
+		if assert.NoError(t, err) {
+			io.Copy(os.Stdout, image)
+			t.Logf("Pull da tag %s feito com sucesso!", tag)
+		}
+	}
+}
+
+// Função para fazer pull de imagens
+func pullImage(image string) (io.ReadCloser, error) {
 	ctx := context.Background()
 	cli, err := client.NewClientWithOpts(client.FromEnv, client.WithAPIVersionNegotiation())
 	if err != nil {
 		panic(err)
 	}
 
-	reader, err := cli.ImagePull(ctx, testImage, types.ImagePullOptions{})
+	return cli.ImagePull(ctx, image, types.ImagePullOptions{})
+}
+
+// Função para criar tag para registry local
+func tagImage(oldTag string) string {
+	ctx := context.Background()
+	cli, err := client.NewClientWithOpts(client.FromEnv, client.WithAPIVersionNegotiation())
+
 	if err != nil {
 		panic(err)
 	}
 
-	defer reader.Close()
-	io.Copy(os.Stdout, reader)
-
 	t := time.Now()
 	newTag := "localhost:5000/gotest:" + t.Format("200610102150405")
-	cli.ImageTag(ctx, testImage, newTag)
-
-	return newTag
-}
-
-func tagImage(newTag string) string {
-	t := time.Now()
-	newTag := "localhost:5000/gotest:" + t.Format("200610102150405")
-	cli.ImageTag(ctx, testImage, newTag)
+	cli.ImageTag(ctx, oldTag, newTag)
 
 	return newTag
 }
