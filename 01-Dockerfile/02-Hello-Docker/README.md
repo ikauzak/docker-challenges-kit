@@ -6,7 +6,8 @@ O principal objetivo é entender como funcionam as `tags`de imagens Docker e o c
 
 ### Crie uma nova versão da imagem Docker
 
-Crie uma segunda imagem `Docker` seguindo essas instruções:
-1. O nome da imagem deverá ser `helloworld`
-2. A tag da imagem deverá ser `v2`
-3. O conteúdo da mensagem deverá ser `"Hello, Docker!"`
+Usando como base o Dockerfile do exercício anterior, crie uma segunda imagem seguindo essas instruções:
+
+1. O arquivo `test.txt` deverá ter seu conteúdo alterado para `"Hello, Docker!"`.
+2. O nome da imagem deverá ser `helloworld`
+3. A tag da imagem deverá ser `v2`
