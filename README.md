@@ -1,6 +1,6 @@
 ## O que é este repositório?
 
-Este repositório armazena diversos exercícios para a fixação dos conceitos básicos Docker.
+Este repositório armazena diversos exercícios para a fixação dos conceitos básicos Docker, juntamente com um laboratório pré criado para ser executado em máquina virtual.
 
 ## Objetivo
 
@@ -8,7 +8,7 @@ O objetivo é utilizar esse material como um apoio para os alunos que se interes
 
 ## Testes
 
-Alguns dos desafios possuem o diretório `test`, nele está contido `scripts` para testes de infraestrutura e validar se o exercício foi concluído corretamente.
+Alguns dos desafios possuem o diretório `test`, nele estão contidos `scripts` para testes de infraestrutura com o objetivo de validar se o exercício foi concluído corretamente.
 
 A ideia é que o próprio aluno(a) consiga entender quais etapas dos desafios não foram concluídas corretamente, ajudando na auto correção dos desafios.
 
@@ -30,3 +30,43 @@ FAIL
 exit status 1
 FAIL	test	0.027s
 ```
+
+## Laboratório
+
+O laboratório é provisionado utilizando as ferramentas [**Virtual Box**](https://www.virtualbox.org/) e [**Vagrant**](https://www.vagrantup.com/).
+
+É necessário a instalação dessas ferramentas para a criação do laboratório, sigam as instruções de instalação na documentação de cada ferramenta. Ambos são compatíveis com sistemas Windows, Linux e macOS.
+
+### Motivcação
+Este laboratório foi criado com o intuito de ganhar tempo, padronização e praticidade na hora de montar o ambiente para aprendizado.
+
+### Requisitos
+Para o bom funcionamento do ambiente, os requisistos **minímos** são:
+
+- memória ram: 4GB
+- vcpu: 2
+- espaço em disco: 10GB
+
+> Os recursos de memória ram e cpu podem ser alterados no arquivo [Vagrantfile](Vagrantfile) nas linhas #19 e #20 (vb.memory e vb.cpus respectivamente) caso haja necessidade de reajuste. 
+
+### Comandos básicos para gerenciar o laboratório:
+Para a inicialização do ambiente:
+```sh
+$ vagrant up
+```
+> O tempo médio da primeira incialização é de 5 minutos (dependendo da velocidade de conexão com a Internet).
+
+Para acessar o ambiente:
+```sh
+$ vagrant ssh
+```
+
+Após o acesso ao ambiente, abra o diretório `/vagrant` para começar os execícios.
+```sh
+$ cd /vagrant
+```
+Para remoção completa do ambiente:
+```sh
+$ vagrant destroy
+```
+> Esse comando removerá a vm por completa do Virtual Box, no entanto, o conteúdo do diretório `/vagrant` da vm ficará disponível neste diretório de forma intacta.
