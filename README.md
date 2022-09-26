@@ -49,12 +49,24 @@ O laboratório é provisionado utilizando as ferramentas [**Virtual Box**](https
 ### Motivcação
 Este laboratório foi criado com o intuito de ganhar tempo, padronização e praticidade na hora de montar o ambiente para aprendizado.
 
+### O ambiente
+O ambiente é executado com duas máquinas virtuais, uma chamada **lab** e outra **client**
+
+1. VM lab: É a máquina aonde 90% das atividades ocorrem.
+2. VM client: É utilizada somente durante a atividade Parte 3 - Usando repositório registry para demonstração.
+
 ### Requisitos
 Para o bom funcionamento do ambiente, os requisistos **minímos** são:
 
-- memória ram: 4GB
-- vcpu: 2
-- espaço em disco: 10GB
+vm lab:
+  memória ram: 4GB
+  vcpu: 2
+  espaço em disco: 10GB
+
+vm client
+  memória ram: 2GB
+  vcpu: 1
+  espaço em disco: 10GB
 
 > Os recursos de memória ram e cpu podem ser alterados no arquivo [config.yaml](config.yaml).
 
@@ -65,10 +77,12 @@ $ vagrant up
 ```
 > O tempo médio da primeira incialização é de 5 minutos (dependendo da velocidade de conexão com a Internet).
 
-Para acessar o ambiente:
+Para acessar o ambiente **lab**:
 ```sh
-$ vagrant ssh
+$ vagrant ssh lab
 ```
+
+Para acessar o ambiente **client**
 
 Após o acesso ao ambiente, abra o diretório `/vagrant` para começar os execícios.
 ```sh
