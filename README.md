@@ -8,12 +8,12 @@ O objetivo é utilizar esse material como um apoio para os alunos que se interes
 
 ## Indíce de atividades
 
-Parte 1 - Iniciando Build
-Parte 2 - Atualizando a aplicação
-Parte 3 - Usando repositórios registry
-Parte 4 - Persistências e pontos de montagem
-Parte 5 - Multi-container apps
-Parte 6 - Usando Docker Compose
+- Parte 1 - [Iniciando Build](tasks/01-Iniciando_Build.md)
+- Parte 2 - Atualizando a aplicação
+- Parte 3 - Usando repositórios registry
+- Parte 4 - Persistências e pontos de montagem
+- Parte 5 - Multi-container apps
+- Parte 6 - Usando Docker Compose
 
 ## Testes
 
