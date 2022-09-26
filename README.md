@@ -6,6 +6,15 @@ Este repositório armazena diversos exercícios para a fixação dos conceitos b
 
 O objetivo é utilizar esse material como um apoio para os alunos que se interessam por Docker, passando alguns desafios aos quais possam tentar resolver por conta própria.
 
+## Indíce de atividades
+
+Parte 1 - Iniciando Build
+Parte 2 - Atualizando a aplicação
+Parte 3 - Usando repositórios registry
+Parte 4 - Persistências e pontos de montagem
+Parte 5 - Multi-container apps
+Parte 6 - Usando Docker Compose
+
 ## Testes
 
 Alguns dos desafios possuem o diretório `test`, nele estão contidos `scripts` para testes de infraestrutura com o objetivo de validar se o exercício foi concluído corretamente.
@@ -47,7 +56,7 @@ Para o bom funcionamento do ambiente, os requisistos **minímos** são:
 - vcpu: 2
 - espaço em disco: 10GB
 
-> Os recursos de memória ram e cpu podem ser alterados no arquivo [Vagrantfile](Vagrantfile) nas linhas #19 e #20 (vb.memory e vb.cpus respectivamente) caso haja necessidade de reajuste. 
+> Os recursos de memória ram e cpu podem ser alterados no arquivo [config.yaml](config.yaml).
 
 ### Comandos básicos para gerenciar o laboratório:
 Para a inicialização do ambiente:
