@@ -9,7 +9,7 @@ O objetivo é utilizar esse material como um apoio para os alunos que se interes
 ## Indíce de atividades
 
 - Parte 1 - [Iniciando Build](tasks/01-Iniciando_Build.md)
-- Parte 2 - Atualizando a aplicação
+- Parte 2 - [Atualizando a aplicação](tasks/02-Atualizando_a_aplicacao.md)
 - Parte 3 - [Usando repositórios registry](tasks/03-Usando_repositorios_registry.md)
 - Parte 4 - Persistências e pontos de montagem
 - Parte 5 - Multi-container apps
