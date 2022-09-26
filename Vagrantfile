@@ -1,5 +1,12 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
+# Fix VirtualBox windows
+class VagrantPlugins::ProviderVirtualBox::Action::Network
+  def dhcp_server_matches_config?(dhcp_server, config)
+    true
+  end
+end
+
 $script = <<-SCRIPT
 wget https://go.dev/dl/go1.19.1.linux-amd64.tar.gz
 tar -xzf go1.19.1.linux-amd64.tar.gz
