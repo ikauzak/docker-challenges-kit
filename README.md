@@ -58,15 +58,17 @@ O ambiente é executado com duas máquinas virtuais, uma chamada **lab** e outra
 ### Requisitos
 Para o bom funcionamento do ambiente, os requisistos **minímos** são:
 
-vm lab:
+```yaml
+lab:
   memória ram: 4GB
   vcpu: 2
   espaço em disco: 10GB
 
-vm client
+client
   memória ram: 2GB
   vcpu: 1
   espaço em disco: 10GB
+```
 
 > Os recursos de memória ram e cpu podem ser alterados no arquivo [config.yaml](config.yaml).
 
