@@ -17,6 +17,9 @@ mv go /usr/local/
 rm -rf go1.19.1.linux-amd64.tar.gz
 echo "export PATH=$PATH:/usr/local/go/bin" >> /etc/profile
 apt-get update && apt-get install gcc -y
+mkdir -p /usr/local/lib/docker/cli-plugins
+curl -SL https://github.com/docker/compose/releases/download/v2.11.1/docker-compose-linux-x86_64 -o /usr/local/lib/docker/cli-plugins/docker-compose
+chmod +x /usr/local/lib/docker/cli-plugins/docker-compose
 SCRIPT
 
 $daemon = <<-SCRIPT
