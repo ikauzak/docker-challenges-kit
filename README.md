@@ -12,7 +12,7 @@ O objetivo é utilizar esse material como um apoio para os alunos que se interes
 - Parte 2 - [Atualizando a aplicação](tasks/02-Atualizando_a_aplicacao.md)
 - Parte 3 - [Usando repositórios registry](tasks/03-Usando_repositorios_registry.md)
 - Parte 4 - [Persistências e pontos de montagem](tasks/04-Persistencias_e_pontos_de_montagem.md)
-- Parte 5 - Multi-container apps
+- Parte 5 - [Multi-container](tasks/05-Multi-container.md)
 - Parte 6 - Usando Docker Compose
 
 ## Testes
