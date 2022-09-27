@@ -6,7 +6,7 @@ Este repositório armazena diversos exercícios para a fixação dos conceitos b
 
 O objetivo é utilizar esse material como um apoio para os alunos que se interessam por Docker, passando alguns desafios aos quais possam tentar resolver por conta própria.
 
-## Indíce de atividades
+## Índice de atividades
 
 - Parte 1 - [Iniciando Build](tasks/01-Iniciando_Build.md)
 - Parte 2 - [Atualizando a aplicação](tasks/02-Atualizando_a_aplicacao.md)
@@ -46,13 +46,13 @@ O laboratório é provisionado utilizando as ferramentas [**Virtual Box**](https
 
 É necessário a instalação dessas ferramentas para a criação do laboratório, sigam as instruções de instalação na documentação de cada ferramenta. Ambos são compatíveis com sistemas Windows, Linux e macOS.
 
-### Motivcação
+### Motivação
 Este laboratório foi criado com o intuito de ganhar tempo, padronização e praticidade na hora de montar o ambiente para aprendizado.
 
 ### O ambiente
 O ambiente é executado com duas máquinas virtuais, uma chamada **lab** e outra **client**
 
-1. VM lab: É a máquina aonde 90% das atividades ocorrem.
+1. VM lab: É a máquina aonde 95% das atividades ocorrem.
 2. VM client: É utilizada somente durante a atividade Parte 3 - Usando repositório registry para demonstração.
 
 ### Requisitos
