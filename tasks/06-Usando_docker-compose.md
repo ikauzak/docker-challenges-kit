@@ -4,7 +4,7 @@ O objetivo desse exercício é entender as principais sintaxes de um arquivo `do
 
 ## Atividades
 
-Dentro do diretório [app](app/), crie um arquivo com o nome de `docker-compose.yml`.
+Dentro do diretório [app](../app/), crie um arquivo com o nome de `docker-compose.yml`.
 
 ### Crie o serviço da aplicação TODO
 1. No arquivo `docker-compose.yml` inclua as sintaxes para a criação do serviço da aplicação, com as mesmas características executadas para ambientes de desenvolvimento.
