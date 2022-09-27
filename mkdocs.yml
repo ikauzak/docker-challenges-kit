@@ -1,0 +1,40 @@
+site_name: Curso Docker
+markdown_extensions:
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:materialx.emoji.twemoji
+      emoji_generator: !!python/name:materialx.emoji.to_svg
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
+nav:
+  - Home: 'index.md'
+  - Atividades:
+    - Iniciando Build: 'atividades/01-Iniciando_Build.md'
+    - Atualizando a aplicação: 'atividades/02-Atualizando_a_aplicacao.md'
+    - Usando repositórios e registry: 'atividades/03-Usando_repositorios_registry.md'
+    - Persistência e pontos de montagem: 'atividades/04-Persistencias_e_pontos_de_montagem.md'
+    - Multi container: 'atividades/05-Multi-container.md'
+    - Usando docker-compose: 'atividades/06-Usando_docker-compose.md'
+theme:
+  name: readthedocs
+  palette:
+    - scheme: default
+      toggle:
+        icon: material/lightbulb 
+        name: Switch to dark mode
+
+    # Palette toggle for dark mode
+    - scheme: slate
+      primary: blue
+      asccent: deep purple
+      toggle:
+        icon: material/lightbulb-outline
+        name: Switch to light mode
