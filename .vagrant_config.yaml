@@ -3,7 +3,6 @@
   ram: 2048
   cpus: 2
   ip: '192.168.56.101'
-  script: "script"
   images:
     - "alpine:3.16.2"
     - "ubuntu:20.04"
@@ -13,5 +12,4 @@
   ram: 1024
   cpus: 1
   ip: '192.168.56.102'
-  script: "daemon"
   images: []
