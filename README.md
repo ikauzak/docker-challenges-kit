@@ -44,14 +44,17 @@ lab:
   vcpu: 2
   espaço em disco: 10GB
 
-client
+client:
   memória ram: 2GB
   vcpu: 1
   espaço em disco: 10GB
 ```
 
-### `config.yaml`
-Os recursos de memória ram e cpu podem ser alterados no arquivo [config.yaml](config.yaml).
+### `.vagrant_config.yaml`
+Os recursos de memória ram e cpu podem ser alterados no arquivo [.vagrant_config.yaml](.vagrant_config.yaml).
+
+### Rede
+É importante verificar o bloco de endereço IP que está em uso pelo VirtualBox, por padrão o script utiliza a rede "vboxnet0". Os endereços de cada VM pode ser editado no arquivo `.vagrant_config.yaml`.
 
 ### Comandos básicos para gerenciar o laboratório:
 Para a inicialização do ambiente:
