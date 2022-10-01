@@ -1,0 +1,2 @@
+Pygments==2.13.0
+pymdown-extensions==9.5

@@ -14,8 +14,14 @@ markdown_extensions:
   - pymdownx.inlinehilite
   - pymdownx.snippets
   - pymdownx.superfences
+  - md_in_html
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
 nav:
   - Home: 'index.md'
+  - Apostila:
+    - Capítulo 1: 'apostila/01-Introducao.md'
   - Atividades:
     - Iniciando Build: 'atividades/01-Iniciando_Build.md'
     - Atualizando a aplicação: 'atividades/02-Atualizando_a_aplicacao.md'
@@ -25,6 +31,12 @@ nav:
     - Usando docker-compose: 'atividades/06-Usando_docker-compose.md'
 theme:
   name: readthedocs
+  font:
+    text: Rubik
+  icon:
+    logo: simple/docker
+  features:
+    - navigation.tabs
   palette:
     - scheme: default
       toggle:

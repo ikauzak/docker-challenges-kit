@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 ## Objetivos
 
 Este exercício tem como objetivo demonstrar o de uma aplicação em multi containers e como essas aplicações se comunicam entre si através da rede Docker.

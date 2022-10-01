@@ -64,7 +64,7 @@ lab:
   vcpu: 2
   espaço em disco: 10GB
 
-client
+client:
   memória ram: 2GB
   vcpu: 1
   espaço em disco: 10GB
