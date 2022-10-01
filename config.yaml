@@ -1,9 +1,0 @@
----
-- name: lab
-  ram: 2048
-  cpus: 2
-  ip: '192.168.56.101'
-- name: client
-  ram: 1024
-  cpus: 1
-  ip: '192.168.56.102'

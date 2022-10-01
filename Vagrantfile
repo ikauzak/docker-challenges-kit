@@ -8,9 +8,9 @@ class VagrantPlugins::ProviderVirtualBox::Action::Network
 end
 
 current_dir    = File.dirname(File.expand_path(__FILE__))
-servers        = YAML.load_file("#{current_dir}/config.yaml")
+servers        = YAML.load_file("#{current_dir}/.vagrant_config.yaml")
 
-$script = <<-SCRIPT
+$lab = <<-SCRIPT
 wget https://go.dev/dl/go1.19.1.linux-amd64.tar.gz
 tar -xzf go1.19.1.linux-amd64.tar.gz
 mv go /usr/local/
@@ -33,25 +33,30 @@ Vagrant.configure("2") do |config|
   
   servers.each do |servers|
     config.vm.define servers["name"] do |srv|
+      
       srv.vm.network "private_network", ip: servers["ip"]
+      
+      srv.vm.hostname = "#{servers["name"]}.local"
+      
+      srv.vm.provision "docker" do |d|
+        servers["images"].each do |image|
+          d.pull_images "#{image}"
+        end
+      end
+      
       case servers["name"]
         when "lab"
-              srv.vm.provision "shell", inline: $script
-              srv.vm.provision "docker" do |d|
-                d.pull_images "alpine:3.16.2"
-                d.pull_images "ubuntu:20.04"
-                d.pull_images "nginx:1.23.1"
-                d.pull_images "registry:2"
-              end
+          srv.vm.provision "shell", inline: $lab
         when "client"
-              srv.vm.provision "docker"
-              srv.vm.provision "shell", inline: $daemon
+          srv.vm.provision "shell", inline: $daemon
       end
+
       srv.vm.provider :virtualbox do |vb|
         vb.name = servers["name"]
         vb.memory = servers["ram"]
         vb.cpus = servers["cpus"]
       end
+
     end
   end
 end
