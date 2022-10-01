@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 ## Objetivos
 O principal objetivo é entender como funcionam as `tags`de imagens Docker e o conceito de infraestrutura imutável. :tada:
 

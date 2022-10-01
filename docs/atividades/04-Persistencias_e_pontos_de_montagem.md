@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 ## Objetivos
 
 Este exercício tem como principal objetivo demonstrar e aplicar tipos de volumes Docker e suas persistências.

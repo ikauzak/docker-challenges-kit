@@ -3,7 +3,7 @@
 FROM squidfunk/mkdocs-material:8.5.3 AS build
 COPY . /docs
 WORKDIR /docs
-RUN mkdocs build
+RUN pip install -r requirements.txt && mkdocs build
 
 FROM nginx:alpine
 COPY --from=build /docs/site /usr/share/nginx/html

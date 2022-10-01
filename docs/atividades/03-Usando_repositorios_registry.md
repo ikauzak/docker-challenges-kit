@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 ## Objetivos
 
 Este exercício tem como principal objetivo demonstrar como funciona um `registry` para hospedar diferentes tipos de imagens.

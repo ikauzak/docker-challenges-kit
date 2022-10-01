@@ -1,3 +1,7 @@
+---
+hide:
+  - toc
+---
 ## Objetivo
 
 O objetivo desse exercício é entender as principais sintaxes de um arquivo `docker-compose.yml` e suas funcionalidades.

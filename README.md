@@ -19,3 +19,63 @@ Todos os arquivos deverão ser criados dentro do diretório `app`
 
 ## Sobre docs
 Um site com as instruções dos exercícios será criado durante o processo do `make start` e disponibilizado localmente para uma melhor leitura e compreensão das atividades.
+
+## Sobre o Laboratório
+
+O laboratório é provisionado utilizando as ferramentas [**Virtual Box**](https://www.virtualbox.org/) e [**Vagrant**](https://www.vagrantup.com/).
+
+É necessário a instalação dessas ferramentas para a criação do laboratório, sigam as instruções de instalação na documentação de cada ferramenta. Ambos são compatíveis com sistemas Windows, Linux e macOS.
+
+### Motivação
+Este laboratório foi criado com o intuito de ganhar tempo, padronização e praticidade na hora de montar o ambiente para aprendizado.
+
+### O ambiente
+O ambiente é executado com duas máquinas virtuais, uma chamada **lab** e outra **client**
+
+1. VM lab: É a máquina aonde 95% das atividades ocorrem.
+2. VM client: É utilizada somente durante a atividade Parte 3 - Usando repositório registry para demonstração.
+
+### Requisitos
+Para o bom funcionamento do ambiente, os requisistos **minímos** são:
+
+```yaml
+lab:
+  memória ram: 4GB
+  vcpu: 2
+  espaço em disco: 10GB
+
+client
+  memória ram: 2GB
+  vcpu: 1
+  espaço em disco: 10GB
+```
+
+### `config.yaml`
+Os recursos de memória ram e cpu podem ser alterados no arquivo [config.yaml](config.yaml).
+
+### Comandos básicos para gerenciar o laboratório:
+Para a inicialização do ambiente:
+```sh
+$ vagrant up
+```
+> O tempo médio da primeira incialização é de 5 minutos (dependendo da velocidade de conexão com a Internet).
+
+Para acessar o ambiente **lab**:
+```sh
+$ vagrant ssh lab
+```
+
+Para acessar o ambiente **client**
+```sh
+$ vagrant ssh client
+```
+
+Após o acesso ao ambiente, abra o diretório `/vagrant` para começar os execícios.
+```sh
+$ cd /vagrant
+```
+Para remoção completa do ambiente:
+```sh
+$ vagrant destroy
+```
+> Esse comando removerá a vm por completa do Virtual Box, no entanto, o conteúdo do diretório `/vagrant` da vm ficará disponível neste diretório de forma intacta.
