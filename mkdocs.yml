@@ -31,6 +31,8 @@ nav:
       - Introdução: apostila/capitulo3/index.md
     - Capítulo 4 - Docker Volumes:
       - Introdução: apostila/capitulo4/index.md
+      - Named Volumes: apostila/capitulo4/named-volumes.md
+      - Bind Volumes: apostila/capitulo4/bind.md
     - Capítulo 5 - Multi containers:
       - Introdução: apostila/capitulo5/index.md
   - Atividades:

@@ -39,13 +39,13 @@ Aqui estamos alterando o comportamento da execução do `CMD`, pois estamos alte
 
 Mais um outro exemplo para ilustrar o comportamento:
 ```shell
-docker run -it --rm -e ARQUIVO_PADRAO=test_3.txt teste2:env bash
-root@704c32149151:/myapp# 
-root@704c32149151:/myapp# env
+$ docker run -it --rm -e ARQUIVO_PADRAO=test_3.txt teste2:env bash
+$ root@704c32149151:/myapp# 
+$ root@704c32149151:/myapp# env
 HOSTNAME=704c32149151
 PWD=/myapp
 ARQUIVO_PADRAO=test_3.txt
-root@704c32149151:/myapp# echo $ARQUIVO_PADRAO
+$ root@704c32149151:/myapp# echo $ARQUIVO_PADRAO
 test_3.txt
 ```
 A variável de ambiente `ARQUIVO_PADRAO` é persistida na execução do container pois foi declarada no `Dockerfile` de criação. O seu valor já não é mais o original (`test_1.txt`) pois o mesmo foi sobreescrito na incialização do container.
