@@ -35,6 +35,7 @@ nav:
       - Bind Volumes: apostila/capitulo4/bind.md
     - Capítulo 5 - Multi containers:
       - Introdução: apostila/capitulo5/index.md
+      - Rede Bridge: apostila/capitulo5/bridge-network.md
   - Atividades:
     - Iniciando Build: 'atividades/01-Iniciando_Build.md'
     - Atualizando a aplicação: 'atividades/02-Atualizando_a_aplicacao.md'
