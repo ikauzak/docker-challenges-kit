@@ -17,17 +17,10 @@ Neste exemplo vamos usar a aplicação `nginx` para entender o conceito de `bind
 Vamos executar um webserver e acessar o seu front para ver o conteúdo estático, e em seguida vamos alterar o arquivo `index.html` e ver essas alterações serem realizadas diretamente no front-end.
 
 1. Crie um arquivo `index.html`:
-```html linenums='1'
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Docker Nginx</title>
-</head>
-<body>
-  <h2>Hello from Nginx container</h2>
-</body>
-</html>
+```html linenums="1" title="capitulo4/exemplos/2/index.html"
+--8<--
+docs/apostila/capitulo4/exemplos/2/index.html
+--8<--
 ```
 
 2. Por padrão, o `nginx` lê os arquivos que estão no diretório `/usr/share/nginx/html/`, por este motivo vamos fazer um `bind` do caminho absoluto do arquivo `index.html` para dentro do diretório padrão do `nginx`:

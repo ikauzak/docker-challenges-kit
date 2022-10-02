@@ -27,21 +27,10 @@ local     persistencia
 ```
 
 2. Crie um `Dockerfile` com este conteúdo e uma imagem com a tag `lab-persistencia:v1`
-```Dockerfile linenums="1"
-FROM ubuntu:20.04
-
-ENV MAX_COUNT=10
-ENV SLEEP_TIME=5
-ENV COUNTER=0
-
-# Necessário para ajustar data e hora no container
-ENV TZ="America/Sao_Paulo"
-RUN apt-get update -y && apt-get install tzdata
-
-RUN echo 'while [  $COUNTER -lt $MAX_COUNT ]; do  ts=$(date +"%d/%m/%Y-%X") ; echo "${ts} ${HOSTNAME}" | tee -a arquivo_persistente.txt && sleep $SLEEP_TIME ; let COUNTER=COUNTER+1 ;  done' > /init.sh && chmod +x /init.sh
-
-WORKDIR /outputs
-CMD ["bash", "-c", "/init.sh"]
+```Dockerfile linenums="1" title="capitulo4/exemplos/1/Dockerfile"
+--8<--
+docs/apostila/capitulo4/exemplos/1/Dockerfile
+--8<--
 ```
 > Esta imagem executa um `script` que salva data, hora e o nome do host num arquivo chamado `arquivo_persistente.txt`.
 
