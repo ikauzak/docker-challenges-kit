@@ -22,6 +22,19 @@ nav:
   - Home: 'index.md'
   - Apostila:
     - Capítulo 1: 'apostila/01-Introducao.md'
+    - Capítulo 2 - Dockerfile: 
+      - Introdução: apostila/capitulo2/index.md
+      - Sobre ARG e ENV: apostila/capitulo2/arg_x_env.md
+      - Sobre ENTRYPOINT e CMD: apostila/capitulo2/entrypoint_x_cmd.md
+      - Multistaging: apostila/capitulo2/multistage.md
+    - Capítulo 3 - Docker Registry:
+      - Introdução: apostila/capitulo3/index.md
+    - Capítulo 4 - Docker Volumes:
+      - Introdução: apostila/capitulo4/index.md
+      - Named Volumes: apostila/capitulo4/named-volumes.md
+      - Bind Volumes: apostila/capitulo4/bind.md
+    - Capítulo 5 - Multi containers:
+      - Introdução: apostila/capitulo5/index.md
   - Atividades:
     - Iniciando Build: 'atividades/01-Iniciando_Build.md'
     - Atualizando a aplicação: 'atividades/02-Atualizando_a_aplicacao.md'
@@ -37,6 +50,8 @@ theme:
     logo: simple/docker
   features:
     - navigation.tabs
+    - content.code.annotate
+    - toc.integrate
   palette:
     - scheme: default
       toggle:
