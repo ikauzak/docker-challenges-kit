@@ -42,12 +42,10 @@ Já o `CMD` foi pré definido no exemplo como `test_1.txt`, no entanto é possí
 A ideia é utilizar as sintaxes `CMD` e `ENTRYPOINT` e usá-las durante algumas execuções.
 
 1. Crie um Dockerfile com o conteúdo abaixo:
-```Dockerfile linenums="1"
-FROM ubuntu:20.04
-WORKDIR /myapp
-RUN for n in $(seq 1 5); do echo "Número $n" > test_$n.txt; done
-CMD ["test_1.txt"]
-ENTRYPOINT ["cat"]
+```Dockerfile linenums="1" title="capitulo2/exemplos/2/Dockerfile"
+--8<--
+docs/apostila/capitulo2/exemplos/2/Dockerfile
+--8<--
 ```
 2. Faça o *build* e execute algumas vezes
 ``` shell

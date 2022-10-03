@@ -33,8 +33,13 @@ nav:
       - Introdução: apostila/capitulo4/index.md
       - Named Volumes: apostila/capitulo4/named-volumes.md
       - Bind Volumes: apostila/capitulo4/bind.md
-    - Capítulo 5 - Multi containers:
+    - Capítulo 5 - Introdução rede Docker:
       - Introdução: apostila/capitulo5/index.md
+      - Rede Bridge: apostila/capitulo5/bridge-network.md
+    - Capítulo 6 - Multi containers:
+      - Introdução: apostila/capitulo6/index.md
+      - Multi container py-web-counter: apostila/capitulo6/multi-containers.md
+      - Docker compose py-web-counter: apostila/capitulo6/docker-compose.md
   - Atividades:
     - Iniciando Build: 'atividades/01-Iniciando_Build.md'
     - Atualizando a aplicação: 'atividades/02-Atualizando_a_aplicacao.md'

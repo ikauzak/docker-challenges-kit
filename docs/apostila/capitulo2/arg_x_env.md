@@ -10,17 +10,10 @@ O consumo de `ARG` e `ENV` são bem diferentes um do outro, a principal distinç
 Abaixo segue um exemplo para entender a diferença entre um comando e outro.
 
 Crie outro Dockerfile com o conteúdo abaixo:
-```Dockerfile linenums="1"
-FROM ubuntu:20.04
-
-ARG MIN=1
-ARG MAX=5
-
-ENV ARQUIVO_PADRAO=test_1.txt
-
-WORKDIR /myapp
-RUN for n in $(seq $MIN $MAX); do echo "Número $n" > test_$n.txt; done
-CMD ["bash", "-c","cat $ARQUIVO_PADRAO"]
+```Dockerfile linenums="1" title="capitulo2/exemplos/1/Dockerfile"
+--8<--
+docs/apostila/capitulo2/exemplos/1/Dockerfile
+--8<--
 ```
 
 #### Uso de ENV

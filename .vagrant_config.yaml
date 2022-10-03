@@ -8,6 +8,8 @@
     - "ubuntu:20.04"
     - "nginx:alpine"
     - "registry:2"
+    - "redis:alpine"
+    - "python:3.7-alpine"
     - "squidfunk/mkdocs-material:8.5.3"
 - name: client
   ram: 1024

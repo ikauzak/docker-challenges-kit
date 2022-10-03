@@ -38,11 +38,10 @@ Mais detalhes sobre os comandos podem ser encontrados na documentação sobre [D
 
 ### Exemplo de Dockerfile
 
-```Dockerfile linenums="1"
-FROM alpine:3.16.2
-WORKDIR /myapp
-RUN echo “Hello, World!” > test.txt
-CMD ["cat", "test.txt"]
+```Dockerfile linenums="1" title="capitulo2/exemplos/0/Dockerfile"
+--8<--
+docs/apostila/capitulo2/exemplos/0/Dockerfile
+--8<--
 ```
 > Repare que o arquivo `test.txt` é criado dentro do diretório `/myapp` devido a instrução `WORKDIR` na linha 2
 
