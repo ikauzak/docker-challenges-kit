@@ -8,7 +8,7 @@ class VagrantPlugins::ProviderVirtualBox::Action::Network
 end
 
 current_dir    = File.dirname(File.expand_path(__FILE__))
-servers        = YAML.load_file("#{current_dir}/.vagrant_config.yaml")
+servers        = YAML.load_file("#{current_dir}/vagrant_config.yaml")
 
 $lab = <<-SCRIPT
 wget https://go.dev/dl/go1.19.1.linux-amd64.tar.gz
