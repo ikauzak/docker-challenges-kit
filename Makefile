@@ -1,6 +1,6 @@
 GREEN=\033[0;32m
 RED=\033[0;31m
-ip=$(shell sh -c "hostname -I" | awk '{print $$1}')
+ip=$(shell sh -c "hostname -I" | awk '{print $$2}')
 HOST_PORT=8000
 docs-build:
 	@docker build . -t docs:lab

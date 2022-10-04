@@ -1,0 +1,14 @@
+version: "3.9"
+services:
+  web:
+    build: ../1/
+    ports:
+      - "5000:5000"
+    depends_on:
+      - redis
+    volumes:
+      - ../1/:/code
+    environment:
+      FLASK_DEBUG: True
+  redis:
+    image: "redis:alpine"

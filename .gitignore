@@ -1,1 +1,3 @@
 .vagrant
+**/*/__pycache__
+desenvolvimento/
