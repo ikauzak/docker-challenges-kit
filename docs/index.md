@@ -6,6 +6,15 @@ Este repositório armazena diversos exercícios para a fixação dos conceitos b
 
 O objetivo é utilizar esse material como um apoio para os alunos que se interessam por Docker, passando alguns desafios aos quais possam tentar resolver por conta própria.
 
+## Índice da apostila
+
+- Capítulo 1 - [Introdução docker](apostila/01-Introducao.md)
+- Capítulo 2 - [Dockerfiles](apostila/capitulo2/index.md)
+- Capítulo 3 - [Docker Registry](apostila/capitulo3/index.md)
+- Capítulo 4 - [Docker volumes](apostila/capitulo4/index.md)
+- Capítulo 5 - [Docker network](apostila/capitulo5/index.md)
+- Capítulo 6 - [Multi containers](apostila/capitulo6/index.md)
+
 ## Índice de atividades
 
 - Parte 1 - [Iniciando Build](atividades/01-Iniciando_Build.md)
@@ -14,31 +23,6 @@ O objetivo é utilizar esse material como um apoio para os alunos que se interes
 - Parte 4 - [Persistências e pontos de montagem](atividades/04-Persistencias_e_pontos_de_montagem.md)
 - Parte 5 - [Multi-container](atividades/05-Multi-container.md)
 - Parte 6 - [Usando Docker Compose](atividades/06-Usando_docker-compose.md)
-
-## Testes
-
-Alguns dos desafios possuem o diretório `test`, nele estão contidos `scripts` para testes de infraestrutura com o objetivo de validar se o exercício foi concluído corretamente.
-
-A ideia é que o próprio aluno(a) consiga entender quais etapas dos desafios não foram concluídas corretamente, ajudando na auto correção dos desafios.
-
-### Como executar os testes
-
-Os testes foram escritos na linguagem de programação [**Golang**](https://go.dev/) boa parte utilizando a biblioteca [Terratest](https://terratest.gruntwork.io/) e [Testify](https://pkg.go.dev/github.com/stretchr/testify).
-
-A execução do teste deve ser feito de dentro do diretório `./test` utilizando o seguinte comando:
-```sh
-$ go test -v -failfast
-
-=== RUN   TestIfImageExists
-    00_test.go:18: 
-        	Error Trace:	00_test.go:18
-        	Error:      	Should be true
-        	Test:       	TestIfImageExists
---- FAIL: TestIfImageExists (0.02s)
-FAIL
-exit status 1
-FAIL	test	0.027s
-```
 
 ## Laboratório
 
@@ -98,3 +82,28 @@ Para remoção completa do ambiente:
 $ vagrant destroy
 ```
 > Esse comando removerá a vm por completa do Virtual Box, no entanto, o conteúdo do diretório `/vagrant` da vm ficará disponível neste diretório de forma intacta.
+
+## Testes (em desenvolvimento)
+
+Alguns dos desafios possuem o diretório `test`, nele estão contidos `scripts` para testes de infraestrutura com o objetivo de validar se o exercício foi concluído corretamente.
+
+A ideia é que o próprio aluno(a) consiga entender quais etapas dos desafios não foram concluídas corretamente, ajudando na auto correção dos desafios.
+
+### Como executar os testes
+
+Os testes foram escritos na linguagem de programação [**Golang**](https://go.dev/) boa parte utilizando a biblioteca [Terratest](https://terratest.gruntwork.io/) e [Testify](https://pkg.go.dev/github.com/stretchr/testify).
+
+A execução do teste deve ser feito de dentro do diretório `./test` utilizando o seguinte comando:
+```sh
+$ go test -v -failfast
+
+=== RUN   TestIfImageExists
+    00_test.go:18: 
+        	Error Trace:	00_test.go:18
+        	Error:      	Should be true
+        	Test:       	TestIfImageExists
+--- FAIL: TestIfImageExists (0.02s)
+FAIL
+exit status 1
+FAIL	test	0.027s
+```

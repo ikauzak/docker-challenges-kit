@@ -1,3 +1,5 @@
+# Dockerfile para desenvolvimento de documentação. Não utilizado durante o curso
+
 FROM squidfunk/mkdocs-material
 
 COPY requirements.txt .
