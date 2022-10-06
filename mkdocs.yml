@@ -41,12 +41,12 @@ nav:
       - Multi container py-web-counter: apostila/capitulo6/multi-containers.md
       - Docker compose py-web-counter: apostila/capitulo6/docker-compose.md
   - Atividades:
-    - Iniciando Build: 'atividades/01-Iniciando_Build.md'
-    - Atualizando a aplicação: 'atividades/02-Atualizando_a_aplicacao.md'
-    - Usando repositórios e registry: 'atividades/03-Usando_repositorios_registry.md'
-    - Persistência e pontos de montagem: 'atividades/04-Persistencias_e_pontos_de_montagem.md'
-    - Multi container: 'atividades/05-Multi-container.md'
-    - Usando docker-compose: 'atividades/06-Usando_docker-compose.md'
+    - Atividade 1 - Iniciando Build: 'atividades/01-Iniciando_Build.md'
+    - Atividade 2 - Atualizando a aplicação: 'atividades/02-Atualizando_a_aplicacao.md'
+    - Atividade 3 - Usando repositórios e registry: 'atividades/03-Usando_repositorios_registry.md'
+    - Atividade 4 - Persistência e pontos de montagem: 'atividades/04-Persistencias_e_pontos_de_montagem.md'
+    - Atividade 5 - Multi container: 'atividades/05-Multi-container.md'
+    - Atividade 6 - Usando docker-compose: 'atividades/06-Usando_docker-compose.md'
 theme:
   name: readthedocs
   font:

@@ -34,7 +34,7 @@ O laboratório é provisionado utilizando as ferramentas [**Virtual Box**](https
 Este laboratório foi criado com o intuito de ganhar tempo, padronização e praticidade na hora de montar o ambiente para aprendizado.
 
 ### O ambiente
-O ambiente é executado com duas máquinas virtuais, uma chamada **lab** e outra **client**
+O ambiente é executado com duas máquinas virtuais, uma chamada **lab** e outra **client**.
 
 1. VM lab: É a máquina aonde 95% das atividades ocorrem.
 2. VM client: É utilizada somente durante a atividade Parte 3 - Usando repositório registry para demonstração.
@@ -54,7 +54,10 @@ client:
   espaço em disco: 10GB
 ```
 
-> Os recursos de memória ram e cpu podem ser alterados no arquivo [config.yaml](config.yaml).
+> Os recursos de memória ram e cpu podem ser alterados no arquivo `vagrant_config.yaml`.
+
+### Rede
+É importante verificar o bloco de endereço IP que está em uso pelo VirtualBox, por padrão o script utiliza a rede "vboxnet0". Os endereços de cada VM pode ser editado no arquivo `vagrant_config.yaml`.
 
 ### Comandos básicos para gerenciar o laboratório:
 Para a inicialização do ambiente:
@@ -82,28 +85,3 @@ Para remoção completa do ambiente:
 $ vagrant destroy
 ```
 > Esse comando removerá a vm por completa do Virtual Box, no entanto, o conteúdo do diretório `/vagrant` da vm ficará disponível neste diretório de forma intacta.
-
-## Testes (em desenvolvimento)
-
-Alguns dos desafios possuem o diretório `test`, nele estão contidos `scripts` para testes de infraestrutura com o objetivo de validar se o exercício foi concluído corretamente.
-
-A ideia é que o próprio aluno(a) consiga entender quais etapas dos desafios não foram concluídas corretamente, ajudando na auto correção dos desafios.
-
-### Como executar os testes
-
-Os testes foram escritos na linguagem de programação [**Golang**](https://go.dev/) boa parte utilizando a biblioteca [Terratest](https://terratest.gruntwork.io/) e [Testify](https://pkg.go.dev/github.com/stretchr/testify).
-
-A execução do teste deve ser feito de dentro do diretório `./test` utilizando o seguinte comando:
-```sh
-$ go test -v -failfast
-
-=== RUN   TestIfImageExists
-    00_test.go:18: 
-        	Error Trace:	00_test.go:18
-        	Error:      	Should be true
-        	Test:       	TestIfImageExists
---- FAIL: TestIfImageExists (0.02s)
-FAIL
-exit status 1
-FAIL	test	0.027s
-```

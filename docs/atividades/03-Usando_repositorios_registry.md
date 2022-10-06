@@ -13,8 +13,8 @@ Aprender os conceitos dos comandos `pull` e `push` no contexto Docker.
 ### Subir um registry docker localmente (vm lab)
 
 Nesta etapa criaremos um `registry` local para ser usado em laboratório.
-
-```sh
+ 
+```shell
 $ docker run -d \
   -p 5000:5000 \
   --restart=always \
@@ -37,7 +37,6 @@ $ docker run -d \
 $ vagrant ssh client
 ```
 2. Faça o `pull` das imagens que foram gravadas no registry da vm **lab**.
-
 > Substitua o valor **localhost** pelo endereço ip da vm **lab**.
 
 3. Verifique se as imagens estão na sua lista de imagens.
