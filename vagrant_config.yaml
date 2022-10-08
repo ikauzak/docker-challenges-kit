@@ -11,6 +11,7 @@
     - "redis:alpine"
     - "python:3.7-alpine"
     - "squidfunk/mkdocs-material:8.5.3"
+    - "ikauzak/docker-course-docs:latest"
 - name: client
   ram: 1024
   cpus: 1

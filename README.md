@@ -6,12 +6,6 @@ Este repositório armazena diversos exercícios para a fixação dos conceitos b
 
 O objetivo é utilizar esse material como um apoio para os alunos que se interessam por Docker, passando alguns desafios aos quais possam tentar resolver por conta própria.
 
-## TL DR;
-Inicie o serviço de documentação e acesse do seu navegador!
-```sh
-$ make start
-```
-
 ## Sobre o diretório `app`
 O diretório `app` é onde os exercícios serão feitos e executados. Trata-se de uma aplicação escrita em `node` para ter como referência durante as execuções e testes.
 
@@ -50,11 +44,11 @@ client:
   espaço em disco: 10GB
 ```
 
-### `.vagrant_config.yaml`
-Os recursos de memória ram e cpu podem ser alterados no arquivo [.vagrant_config.yaml](.vagrant_config.yaml).
+### `vagrant_config.yaml`
+Os recursos de memória ram e cpu podem ser alterados no arquivo [vagrant_config.yaml](vagrant_config.yaml).
 
 ### Rede
-É importante verificar o bloco de endereço IP que está em uso pelo VirtualBox, por padrão o script utiliza a rede "vboxnet0". Os endereços de cada VM pode ser editado no arquivo `.vagrant_config.yaml`.
+É importante verificar o bloco de endereço IP que está em uso pelo VirtualBox, por padrão o script utiliza a rede "vboxnet0". Os endereços de cada VM pode ser editado no arquivo `vagrant_config.yaml`.
 
 ### Comandos básicos para gerenciar o laboratório:
 Para a inicialização do ambiente:
