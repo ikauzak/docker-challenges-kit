@@ -1,7 +1,7 @@
 ---
 - name: lab
-  ram: 2048
-  cpus: 2
+  ram: 1024
+  cpus: 1
   ip: '192.168.56.101'
   images:
     - "alpine:3.16.2"
@@ -10,5 +10,4 @@
     - "registry:2"
     - "redis:alpine"
     - "python:3.7-alpine"
-    - "squidfunk/mkdocs-material:8.5.3"
     - "ikauzak/docker-course-docs:latest"
