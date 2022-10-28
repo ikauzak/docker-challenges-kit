@@ -34,12 +34,7 @@ Para o bom funcionamento do ambiente, os requisistos **minímos** são:
 
 ```yaml
 lab:
-  memória ram: 4GB
-  vcpu: 2
-  espaço em disco: 10GB
-
-client:
-  memória ram: 2GB
+  memória ram: 1GB
   vcpu: 1
   espaço em disco: 10GB
 ```
@@ -60,11 +55,6 @@ $ vagrant up
 Para acessar o ambiente **lab**:
 ```sh
 $ vagrant ssh lab
-```
-
-Para acessar o ambiente **client**
-```sh
-$ vagrant ssh client
 ```
 
 Após o acesso ao ambiente, abra o diretório `/vagrant` para começar os execícios.
