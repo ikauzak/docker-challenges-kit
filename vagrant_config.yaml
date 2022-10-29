@@ -10,4 +10,5 @@
     - "registry:2"
     - "redis:alpine"
     - "python:3.7-alpine"
+    - "mcr.microsoft.com/dotnet/sdk:6.0"
     - "ikauzak/docker-course-docs:latest"
