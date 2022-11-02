@@ -1,15 +1,16 @@
+# Primeiro estágio
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build-env
 WORKDIR /App
 
-# Copy everything
+# Copiar o conteúdo do diretório local para a imagem
 COPY . ./
-# Restore as distinct layers
 RUN dotnet restore
-# Build and publish a release
+# Compilar pacotes
 RUN dotnet publish -c Release -o out
 
-# Build runtime image
+# Segundo estágio
 FROM mcr.microsoft.com/dotnet/aspnet:6.0
 WORKDIR /App
+# Copiando artefatos criados no primeiro estágio
 COPY --from=build-env /App/out .
 ENTRYPOINT ["dotnet", "DotNet.Docker.dll"]
